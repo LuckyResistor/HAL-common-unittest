@@ -1,0 +1,6 @@
+[submodule "src/hal-common"]
+	path = src/hal-common
+	url = git@lr.github.com:LuckyResistor/HAL-common.git
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest.git
