@@ -4,11 +4,14 @@ cmake_minimum_required(VERSION 3.14)
 # Set the project name
 project(HAL-common-unittest)
 
+# Make the unit test detectable.
+add_compile_definitions(UNITTEST=1)
+
 # Make sure we use the C++17 compiler standard
 set(CMAKE_CXX_STANDARD 17)
 
 # Set the executable name
-add_executable(HAL-common-unittest src/RingBufferTest.cpp src/BCDTest.cpp src/DateTimeTest.cpp src/TimestampTest.cpp)
+add_executable(HAL-common-unittest src/RingBufferTest.cpp src/BCDTest.cpp src/DateTimeTest.cpp src/TimestampTest.cpp src/IntegerMathTest.cpp src/StringTest.cpp)
 
 # Add the google test as subproject
 add_subdirectory(googletest)
